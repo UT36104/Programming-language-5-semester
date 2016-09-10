@@ -13,27 +13,27 @@
         
         public void MoveUp()
         {
-            //center = new MovablePoint(XSpeed:, 1, 2, 1);
+            center.MoveUp();
         }
 
         public void MoveDown()
         {
-
+            center.MoveDown();
         }
 
         public void MoveLeft()
         {
-
+            center.MoveLeft();
         }
 
         public void MoveRight()
         {
-
+            center.MoveRight();
         }
 
         public override string ToString()
         {
-            return $"Радиус {radius}, Центр {center}.";
+            return $"Радиус {radius}, Центр {center}";
         }
     }
 }

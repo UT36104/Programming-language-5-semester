@@ -46,7 +46,7 @@ namespace Laba_1
 
         public override string ToString()
         {
-            return $"Цвет: {color}, Закрашена: {filled}, Сторона: {height}, Площадь: {GetArea()}, Периметр {GetPerimeter()}.";
+            return $"Цвет: {color}, Закрашена: {filled}, Сторона: {height}, Площадь: {GetArea()}, Периметр {GetPerimeter()}";
         }
     }
 }

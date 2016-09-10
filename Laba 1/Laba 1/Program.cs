@@ -48,6 +48,12 @@ namespace Laba_1
             Console.WriteLine(m2);
             m2.MoveRight();
             Console.WriteLine(m2);
+            Console.WriteLine();
+
+            MovableRectangle m3 = new MovableRectangle(new MovablePoint(10, 8, 10, 10), new MovablePoint(5, 6, 10, 10));
+            Console.WriteLine(m3);
+            m3.MoveRight();
+            Console.WriteLine(m3);
 
             Console.ReadLine();
         }

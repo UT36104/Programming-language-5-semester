@@ -34,7 +34,7 @@
 
         public override string ToString()
         {
-            return $"Цвет: {color}, Закрашена: {filled}.";
+            return $"Цвет: {color}, Закрашена: {filled}";
         }
     }
 }

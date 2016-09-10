@@ -53,7 +53,7 @@
 
         public override string ToString()
         {
-            return $"Цвет: {color}, Закрашена: {filled}, Высота: {height}, Ширина: {width}, Площадь: {GetArea()}, Периметр {GetPerimeter()}.";
+            return $"Цвет: {color}, Закрашена: {filled}, Высота: {height}, Ширина: {width}, Площадь: {GetArea()}, Периметр {GetPerimeter()}";
         }
     }
 }
