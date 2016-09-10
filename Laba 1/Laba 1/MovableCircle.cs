@@ -5,9 +5,15 @@
         private int radius;
         private MovablePoint center;
 
+        public MovableCircle(int Radius, MovablePoint Center)
+        {
+            radius = Radius;
+            center = Center;
+        }
+        
         public void MoveUp()
         {
-
+            //center = new MovablePoint(XSpeed:, 1, 2, 1);
         }
 
         public void MoveDown()

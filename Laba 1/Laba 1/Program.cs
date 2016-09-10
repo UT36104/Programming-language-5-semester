@@ -38,17 +38,16 @@ namespace Laba_1
             Console.WriteLine(s1.Side);
             Console.WriteLine();
 
-            /*
-            Movable m1 = new MovablePoint(5, 6, 10);
-            System.Console.WriteLine(m1);
+            MovablePoint m1 = new MovablePoint(5, 6, 10, 10);
+            Console.WriteLine(m1);
             m1.MoveLeft();
-            System.Console.WriteLine(m1);
+            Console.WriteLine(m1);
+            Console.WriteLine();
 
-            Movable m2 = new MovableCircle(2, 1, 2, 20);
-            System.Console.WriteLine(m2);
+            MovableCircle m2 = new MovableCircle(2, new MovablePoint(5, 6, 10, 10));
+            Console.WriteLine(m2);
             m2.MoveRight();
-            System.Console.WriteLine(m2);
-            */
+            Console.WriteLine(m2);
 
             Console.ReadLine();
         }
