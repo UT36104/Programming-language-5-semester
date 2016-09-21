@@ -48,6 +48,7 @@
     <Compile Include="MovableCircle.cs" />
     <Compile Include="MovablePoint.cs" />
     <Compile Include="MovableRectangle.cs" />
+    <Compile Include="Point.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rectangle.cs" />

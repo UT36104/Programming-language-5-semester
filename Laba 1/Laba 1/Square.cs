@@ -7,7 +7,7 @@ namespace Laba_1
         public double Side
         {
             get { return width; }
-            set { Width = width; Height = height; }
+            set { width = height = value; }
         }
 
         public Square()
@@ -20,6 +20,8 @@ namespace Laba_1
 
         public Square(double WidthHeight)
         {
+            color = "BLACK";
+            filled = false;
             width = WidthHeight;
             height = WidthHeight;
         }
@@ -34,13 +36,13 @@ namespace Laba_1
 
         public override double GetArea()
         {
-            double s = 6 * Math.Pow(width, 6);
+            double s = Math.Pow(width, 2);
             return s;
         }
 
         public override double GetPerimeter()
         {
-            double p = 12 * width;
+            double p = 4 * width;
             return p;
         }
 

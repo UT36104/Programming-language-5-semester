@@ -1,9 +1,8 @@
 ﻿namespace Laba_1
 {
-    public class MovablePoint : IMovable
+    public class MovablePoint : Point, IMovable
     {
-        protected int x;
-        protected int y;
+
         protected int xSpeed;
         protected int ySpeed;
 

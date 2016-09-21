@@ -8,7 +8,7 @@ namespace Laba_1
 
         public double Radius {
             get { return radius; }
-            set { Radius = radius; }
+            set { radius = value; }
         }
 
         public Circle()

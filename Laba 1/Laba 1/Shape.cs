@@ -11,7 +11,7 @@
         public string Color
         {
             get { return color; }
-            set { Color = color; }
+            set { color = value; }
         }
 
         public bool IsFilled
