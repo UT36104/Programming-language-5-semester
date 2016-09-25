@@ -14,7 +14,9 @@ namespace Laba2
         public int Intelligence { get; set; }
         public int Effects { get; private set; }
         public int Level { get; private set; }
-        private Effect effect = new Effect[] { new Effect(), };
+
+        private Effect[] effect = new Effect[] { new Effect(), new Effect(), new Effect(), new Effect()};
+
         public Effect this[int index]
         {
             get

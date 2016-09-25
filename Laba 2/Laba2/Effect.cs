@@ -8,28 +8,41 @@ namespace Laba2
 {
     class Effect : IEquatable<int>
     {
-
         public string EffectType { get; set; }
         public float Duration { get; set; }
 
-        public override int GetHashCode()
+        public bool EffectDo
+        {
+            get
+            {
+                if (Duration == -1)
+                    return true;
+                else
+                    return false;
+            }
+        }
+
+        public int GetHashCode()
         {
             return base.GetHashCode();
         }
 
-        public override bool Equals(object obj)
+        public bool Equals(int other)
         {
-            return base.Equals(obj);
+            return base.Equals(other);
         }
 
-        public static bool operator ==(Effect obj1, Effect obj2)
+        public static bool operator ==(Effect eff1, Effect eff2)
         {
+            if ((eff1.EffectType == eff2.EffectType) && (eff1.Duration == eff2.Duration) && (eff1.EffectDo == eff2.EffectDo))
+                return true;
             return false;
         }
 
-        public static bool operator !=(Effect obj1, Effect obj2)
+        public static bool operator !=(Effect eff1, Effect eff2)
         {
-
+            if ((eff1.EffectType != eff2.EffectType) || (eff1.Duration != eff2.Duration) || (eff1.EffectDo != eff2.EffectDo))
+                return true;
             return false;
         }
     }

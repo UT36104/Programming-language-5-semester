@@ -9,7 +9,7 @@ namespace Laba2
     class Wizard: Player
     {
         public int Mana { get; set; }
-
+        
         public Wizard()
         {
             Life = 100;
@@ -25,6 +25,11 @@ namespace Laba2
             this.Dexterity = Dexterity;
             this.Intelligence = Intelligence;
             this.Mana = Mana;
+        }
+        
+        public void ChanceToDodgeAttack(Player enemy)
+        {
+
         }
 
         public override void Attack(TargetObject targetObject)
