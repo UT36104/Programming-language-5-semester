@@ -1,9 +1,9 @@
 ﻿namespace Laba2
 {
-    public class Weapon : RequirementsParams
+    public class Weapon : Requirements
     {
-        public int Damage { get; set; }
-        public string WeaponType { get; set; }
-        public int Requirements { get; set; }
+        private int Damage { get; set; }
+        private string WeaponType { get; set; }
+        private Requirements Requirements { get; set; }
     }
 }

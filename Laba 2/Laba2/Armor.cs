@@ -1,9 +1,9 @@
 ﻿namespace Laba2
 {
-    public class Armor : RequirementsParams
+    public class Armor : Requirements
     {
-        public int Defense { get; set; }
-        public string ArmorType { get; set; }
-        public string Requirements { get; set; }
+        private int Defense { get; set; }
+        private string ArmorType { get; set; }
+        private Requirements Requirements { get; set; }
     }
 }
