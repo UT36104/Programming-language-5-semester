@@ -12,8 +12,8 @@ namespace Laba2
         public int Strange { get; set; }
         public int Dexterity { get; set; }
         public int Intelligence { get; set; }
-        public int Effects { get; private set; }
-        public int Level { get; private set; }
+        public int Effects { get; protected set; }
+        public int Level { get; protected set; }
 
         private Effect[] effect = new Effect[] { new Effect(), new Effect(), new Effect(), new Effect()};
 

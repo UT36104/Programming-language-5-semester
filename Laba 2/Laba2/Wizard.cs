@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Laba2
+﻿namespace Laba2
 {
     class Wizard: Player
     {
@@ -26,10 +20,25 @@ namespace Laba2
             this.Intelligence = Intelligence;
             this.Mana = Mana;
         }
-        
-        public void ChanceToDodgeAttack(Player enemy)
-        {
 
+        public void LevelUp()
+        {
+            Level += 1;
+            Strange += 3;
+            Dexterity += 3;
+            Intelligence += 3;
+        }
+
+        public int ChanceToDodgeAttack(int attack)
+        {
+            return Dexterity / attack / 100;
+        }
+
+        public bool CanAttack(Effect effect)
+        {
+            if (effect.Duration == -1)
+                return true;
+            return false;
         }
 
         public override void Attack(TargetObject targetObject)
