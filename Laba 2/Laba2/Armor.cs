@@ -2,8 +2,8 @@
 {
     public class Armor : Requirements
     {
-        private int Defense { get; set; }
-        private string ArmorType { get; set; }
-        private Requirements Requirements { get; set; }
+        public int Defense { get; set; }
+        public string ArmorType { get; set; }
+        public Requirements Requirements { get; set; }
     }
 }
