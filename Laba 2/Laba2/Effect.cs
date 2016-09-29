@@ -5,7 +5,13 @@ namespace Laba2
     class Effect : IEquatable<int>
     {
         public string EffectType { get; set; }
-        public float Duration { get; set; }
+        public double Duration { get; set; }
+
+        public Effect(string EffectType, double Duration)
+        {
+            this.EffectType = EffectType;
+            this.Duration = Duration;
+        }
 
         public bool EffectDo
         {

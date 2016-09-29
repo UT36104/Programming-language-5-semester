@@ -15,7 +15,12 @@ namespace Laba2
         public int Effects { get; protected set; }
         public int Level { get; protected set; }
 
-        private Effect[] effect = new Effect[] { new Effect(), new Effect(), new Effect(), new Effect()};
+        private Effect[] effect = new Effect[] {
+            new Effect("оглушение", 2.0),
+            new Effect("отравление", 5.0),
+            new Effect("пчелиный укус", 2.0),
+            new Effect("яд змеи", 2.0)
+        };
 
         public Effect this[int index]
         {
@@ -45,7 +50,7 @@ namespace Laba2
             this.Level = Level;
         }
 
-        public abstract void Attack(TargetObject targetObject);
+        public abstract void Attack(TargetObject targetObject, Effect effect, Weapon weapon);
         public abstract void EquipWeapon(Weapon weapon);
         public abstract void EquipOutfit(Armor armor);
         public abstract void AddEffect(Effect effect);

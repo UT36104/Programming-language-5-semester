@@ -48,11 +48,11 @@ namespace Laba2
             return false;
         }
 
-        public override void Attack(TargetObject targetObject)
+        public override void Attack(TargetObject targetObject, Effect effect, Weapon weapon)
         {
-            if (CanAttack(new Effect()))
+            if (CanAttack(effect))
             {
-                targetObject.Life = targetObject.Life - new Weapon().Damage;
+                targetObject.Life = targetObject.Life - weapon.Damage;
             }
         }
 
