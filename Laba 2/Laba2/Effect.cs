@@ -2,8 +2,9 @@
 
 namespace Laba2
 {
-    class Effect : IEquatable<int>
+    class Effect : IEquatable<Object>
     {
+        public enum EffectDictionary { оглушение, яд, укус, слюна, слизь, паутина, заморозка }
         public string EffectType { get; set; }
         public double Duration { get; set; }
 
@@ -18,20 +19,33 @@ namespace Laba2
             get
             {
                 if (Duration == -1)
+                {
                     return true;
+                }
                 else
+                {
                     return false;
+                } 
             }
+        }
+
+        public bool Equals(Effect obj)
+        {
+            if (obj == null)
+            {
+                return false;
+            }
+            Effect p = obj as Effect;
+            if ((Object)p == null)
+            {
+                return false;
+            }
+            return (EffectType == p.EffectType) && (Duration == p.Duration);
         }
 
         public int GetHashCode()
         {
-            return base.GetHashCode();
-        }
-
-        public bool Equals(int other)
-        {
-            return base.Equals(other);
+            return EffectType.GetHashCode();
         }
 
         public static bool operator ==(Effect eff1, Effect eff2)

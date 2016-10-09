@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Laba2
+﻿namespace Laba2
 {
     abstract class Player: TargetObject
     {
@@ -14,21 +8,8 @@ namespace Laba2
         public int Intelligence { get; set; }
         public int Effects { get; protected set; }
         public int Level { get; protected set; }
-
-        private Effect[] effect = new Effect[] {
-            new Effect("оглушение", 2.0),
-            new Effect("отравление", 5.0),
-            new Effect("пчелиный укус", 2.0),
-            new Effect("яд змеи", 2.0)
-        };
-
-        public Effect this[int index]
-        {
-            get
-            {
-                return effect[index];
-            }
-        }
+        public Weapon Weapon { get; set; }
+        public Armor Armor { get; set; }
 
         public Player()
         {
@@ -38,9 +19,11 @@ namespace Laba2
             Intelligence = 10;
             Effects = 0;
             Level = 1;
+            Armor = new Armor(20, "подштаники", new Requirements(1,1,1));
+            Weapon = new Weapon(10, "камень", new Requirements(1,1,1));
         }
 
-        public Player(int Life, int Strange, int Dexterity, int Intelligence, int Effects, int Level)
+        public Player(int Life, int Strange, int Dexterity, int Intelligence, int Effects, int Level, Armor Armor, Weapon Weapon)
         {
             this.Life = Life;
             this.Strange = Strange;
@@ -48,6 +31,8 @@ namespace Laba2
             this.Intelligence = Intelligence;
             this.Effects = Effects;
             this.Level = Level;
+            this.Armor = Armor;
+            this.Weapon = Weapon;
         }
 
         public abstract void Attack(TargetObject targetObject, Effect effect, Weapon weapon);

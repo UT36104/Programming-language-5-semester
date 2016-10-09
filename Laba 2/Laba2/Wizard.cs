@@ -43,9 +43,15 @@ namespace Laba2
 
         public bool CanAttack(Effect effect)
         {
-            if (effect.EffectType != "оглушение")
-                return true;
-            return false;
+            bool status = true;
+            foreach (string name in Enum.GetValues(typeof(Effect.EffectDictionary)))
+            {
+                if (effect.EffectType == (string)name)
+                {
+                    status = false;
+                }
+            }
+            return status;
         }
 
         public override void Attack(TargetObject targetObject, Effect effect, Weapon weapon)
@@ -62,6 +68,10 @@ namespace Laba2
             {
                 new PlayerOutfitException("НЕДОСТАТОЧНО СТАТОВ");
             }
+            if (weapon.WeaponType != "посох")
+            {
+                new PlayerOutfitException("ТИП ОРУЖИЯ НЕ ПОДХОДИТ");
+            }
         }
 
         public override void EquipOutfit(Armor armor)
@@ -70,13 +80,18 @@ namespace Laba2
             {
                 new PlayerOutfitException("НЕДОСТАТОЧНО СТАТОВ");
             }
+            if (armor.ArmorType != "плащ")
+            {
+                new PlayerOutfitException("ТИП БРОНИ НЕ ПОДХОДИТ");
+            }
         }
 
         public override void AddEffect(Effect effect)
         {
             if (effect.Duration == -1)
-                effect.EffectType = effect.EffectType;
-                effect.Duration = effect.Duration;
+            {
+                effect = new Effect(effect.EffectType, effect.Duration);
+            }
         }
     }
 }
