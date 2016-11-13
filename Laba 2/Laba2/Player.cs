@@ -19,8 +19,8 @@
             Intelligence = 10;
             Effects = 0;
             Level = 1;
-            Armor = new Armor(20, "подштаники", new Requirements(1,1,1));
-            Weapon = new Weapon(10, "камень", new Requirements(1,1,1));
+            Armor = new Armor(20, Armor.ArmorType.sportivki, new Requirements(1,1,1));
+            Weapon = new Weapon(10, Weapon.WeaponType.arms, new Requirements(1,1,1));
         }
 
         public Player(int Life, int Strange, int Dexterity, int Intelligence, int Effects, int Level, Armor Armor, Weapon Weapon)

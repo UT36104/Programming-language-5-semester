@@ -44,9 +44,9 @@ namespace Laba2
         public bool CanAttack(Effect effect)
         {
             bool status = true;
-            foreach (string name in Enum.GetValues(typeof(Effect.EffectDictionary)))
+            foreach (string name in Enum.GetValues(typeof(Effect.EffectType)))
             {
-                if (effect.EffectType == (string)name)
+                if (effect.EffectType == EffectType.stun)
                 {
                     status = false;
                 }
@@ -54,9 +54,9 @@ namespace Laba2
             return status;
         }
 
-        public override void Attack(TargetObject targetObject, Effect effect, Weapon weapon)
+        public override void Attack(TargetObject targetObject)
         {
-            if (CanAttack(effect))
+            if (CanAttack())
             {
                 targetObject.Life = targetObject.Life - weapon.Damage;
             }
@@ -68,7 +68,7 @@ namespace Laba2
             {
                 new PlayerOutfitException("НЕДОСТАТОЧНО СТАТОВ");
             }
-            if (weapon.WeaponType != "посох")
+            if (weapon.WeaponType != weapon.WeaponType.staff)
             {
                 new PlayerOutfitException("ТИП ОРУЖИЯ НЕ ПОДХОДИТ");
             }
@@ -80,7 +80,7 @@ namespace Laba2
             {
                 new PlayerOutfitException("НЕДОСТАТОЧНО СТАТОВ");
             }
-            if (armor.ArmorType != "плащ")
+            if (armor.ArmorType != armor.ArmorType.coat)
             {
                 new PlayerOutfitException("ТИП БРОНИ НЕ ПОДХОДИТ");
             }

@@ -1,6 +1,6 @@
 ﻿namespace Laba_1
 {
-    public class MovableRectangle : Rectangle, IMovable
+    public class MovableRectangle : IMovable
     {
         private MovablePoint topLeft;
         private MovablePoint bottomRight;

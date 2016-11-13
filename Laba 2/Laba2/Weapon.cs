@@ -5,23 +5,21 @@ namespace Laba2
     public class Weapon
     {
         public int Damage { get; set; }
-        public string WeaponType { get; set; }
         public Requirements Requirements { get; set; }
+        public enum WeaponType { bones, arms, stick, rock, staff }
 
-        public enum WeaponDictionary { дубина, кулаки, палка, камень, посох }
-
-        public Weapon(int Damage, string WeaponType, Requirements Requirements)
+        public Weapon(int Damage, enum WeaponType, Requirements Requirements)
         {
             this.Damage = Damage;
-            foreach (string name in Enum.GetValues(typeof(WeaponDictionary)))
+            foreach (string name in Enum.GetValues(typeof(WeaponType)))
             {
                 if (WeaponType == (string)name)
                 {
-                    this.WeaponType = WeaponType;
+                    this.WeaponType = name;
                 }
                 else
                 {
-                    this.WeaponType = "палка";
+                    this.WeaponType = WeaponType.bones;
                 }
             }
             this.Requirements = Requirements;

@@ -5,23 +5,21 @@ namespace Laba2
     public class Armor
     {
         public int Defense { get; set; }
-        public string ArmorType { get; set; }
+        public enum ArmorType { leather, jacket, coat, sportivki, underpants, briefs }
         public Requirements Requirements { get; set; }
 
-        public enum ArmorDictionary { латы, кожанка, плащ, спортивки, подштаники, трусы, кеприк }
-
-        public Armor(int Defense, string ArmorType, Requirements Requirements)
+        public Armor(int Defense, enum ArmorType, Requirements Requirements)
         {
             this.Defense = Defense;
-            foreach (string name in Enum.GetValues(typeof(ArmorDictionary)))
+            foreach (string name in Enum.GetValues(typeof(ArmorType)))
             {
                 if (ArmorType == (string)name)
                 {
-                    this.ArmorType = ArmorType;
+                    this.ArmorType = name;
                 }
                 else
                 {
-                    this.ArmorType = "трусы";
+                    this.ArmorType = ArmorType.underpants;
                 }
             }
             this.Requirements = Requirements;

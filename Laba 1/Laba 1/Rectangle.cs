@@ -8,13 +8,13 @@
         public double Width
         {
             get { return width; }
-            set { width = value; }
+            set { Width = width; }
         }
 
         public double Height
         {
             get { return height; }
-            set { height = value; }
+            set { Height = height; }
         }
 
         public Rectangle()

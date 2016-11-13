@@ -4,8 +4,7 @@ namespace Laba2
 {
     class Effect : IEquatable<Object>
     {
-        public enum EffectDictionary { оглушение, яд, укус, слюна, слизь, паутина, заморозка }
-        public string EffectType { get; set; }
+        public enum EffectType { stun, poison, bite, saliva, mucus, webs, frost }
         public double Duration { get; set; }
 
         public Effect(string EffectType, double Duration)

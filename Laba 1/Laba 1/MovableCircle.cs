@@ -1,7 +1,8 @@
 ﻿namespace Laba_1
 {
-    public class MovableCircle : Circle, IMovable
+    public class MovableCircle : IMovable
     {
+        private int radius;
         private MovablePoint center;
 
         public MovableCircle(int Radius, MovablePoint Center)

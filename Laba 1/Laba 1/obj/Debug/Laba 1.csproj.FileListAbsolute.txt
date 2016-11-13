@@ -6,9 +6,6 @@ D:\ДВГУПС\5 семестр\OOP - 5 семестр - 230 группа\Laba 
 D:\ДВГУПС\5 семестр\OOP - 5 семестр - 230 группа\Laba 1\Laba 1\obj\Debug\Laba 1.csprojResolveAssemblyReference.cache
 D:\ДВГУПС\5 семестр\OOP - 5 семестр - 230 группа\Laba 1\Laba 1\obj\Debug\Laba 1.exe
 D:\ДВГУПС\5 семестр\OOP - 5 семестр - 230 группа\Laba 1\Laba 1\obj\Debug\Laba 1.pdb
-C:\Users\Misha\Desktop\Programming-language-5-semester\Laba 1\Laba 1\bin\Debug\Laba 1.exe.config
-C:\Users\Misha\Desktop\Programming-language-5-semester\Laba 1\Laba 1\obj\Debug\Laba 1.exe
-C:\Users\Misha\Desktop\Programming-language-5-semester\Laba 1\Laba 1\obj\Debug\Laba 1.pdb
-C:\Users\Misha\Desktop\Programming-language-5-semester\Laba 1\Laba 1\bin\Debug\Laba 1.exe
-C:\Users\Misha\Desktop\Programming-language-5-semester\Laba 1\Laba 1\bin\Debug\Laba 1.pdb
-C:\Users\Misha\Desktop\Programming-language-5-semester\Laba 1\Laba 1\obj\Debug\Laba 1.csprojResolveAssemblyReference.cache
+D:\ДВГУПС\5 семестр\OOП\Laba 1\Laba 1\bin\Debug\Laba 1.exe.config
+D:\ДВГУПС\5 семестр\OOП\Laba 1\Laba 1\obj\Debug\Laba 1.exe
+D:\ДВГУПС\5 семестр\OOП\Laba 1\Laba 1\obj\Debug\Laba 1.pdb
